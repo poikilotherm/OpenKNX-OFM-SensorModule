@@ -6,3 +6,4 @@ Wird "Kein Sensor" ausgewählt, wird die Luftfeuchte nicht ermittelt.
 
 Nur wenn ein Sensor für die Ermittlung der Luftfeuchte ausgewählt wurde, erscheint eine Seite "Luftfeuchte", auf der passende Einstellungen zum Messwert gemacht werden können.
 
+Achtung: bei Verwendung von SHTxx Sensoren sowohl für Temperatur als auch Luftfeuchte muss derselbe Sensortyp ausgewählt werden!

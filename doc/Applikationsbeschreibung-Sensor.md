@@ -54,6 +54,13 @@ Die Applikation für das SensorModule erlaubt die Parametrisierung des Sensormod
 
 Im folgenden werden Änderungen an dem Dokument erfasst, damit man nicht immer das Gesamtdokument lesen muss, um Neuerungen zu erfahren.
 
+25.11.2026: Firmware 4.11.5, Applikation 4.11
+* Der Sensor SHT4x für Temperatur und Luftfeuchte wird nun offiziell unterstützt. Es gelten einige Regeln:
+  * Keinen SHT3x und SHT4x physisch zusammen anschließen! Die Protokolle sind nicht kompatibel, sprechen aber dieselbe I2C Adresse an!
+  * Wenn ein SHTxx-Sensor für Temperatur und Luftfeuchte genutzt werden soll, für beides denselben Typen auswählen in der ETS!
+  * Es dürfen nur SHT4x mit I2C Adresse 0x44 verwendet werden (SHT40-A, SHT41, SHT43-A und SHT45).
+    SHT40-B und SHT43-B mit I2C Adresse 0x45 erzeugen einen Konflikt bei Verwendung eines OPT300x Sensors und werden explizit nicht unterstützt!
+
 20.06.2026: Firmware 4.11.4, Applikation 4.11
 
 * Wenn ein Sensor NaN (Not a Number, ungültiger Wert) liefert, wird keine Werteberechnung mehr durchgeführt. Damit wird auch bei defekten oder ausgefallenen Sensoren nicht mehr unbeabsichtigt viele Telegramme auf den Bus gesendet werden.
@@ -308,6 +315,7 @@ Die unterstützten Sensoren liefern folgende Messwerte:
 Sensorauswahl | Temperatur | Luftfeuchte | Luftdruck | VOC | CO<sub>2</sub> | Helligkeit | Entfernung
 ---|:---:|:---:|:---:|:---:|:---:|:---:|:---:
 SHT3x   | X | X |   |   |   |
+SHT4x   | X | X |   |   |   |
 BMP280  | X | X |   |   |   |
 BME680  | X | X | X | X | X<sup>2)</sup>
 SCD30<sup>4)</sup>   | X | X |   |   | X |
@@ -354,6 +362,7 @@ Sollten beide Sensoren BME280 und BME680 ausgewählt worden sein, erscheint folg
 |   12   |   BME680   |   BME680    |  BME680   | BME680  |     SCD4x      |            |            |
 |   13   |   SCD4x    |    SCD4x    |  BME280   |         |     SCD4x      |            |            |
 |   14   |   SCD4x    |    SCD4x    |  BME680   | BME680  |     SCD4x      |            |            |
+|  15    |   SHT4x    |    SHT4x    |           |         |                |            |            |
 
 Die in den Tabellen angegebenen Kombinationen sagen nichts darüber aus, ob die Sensoren direkt an das Sensormodul angeschlossen werden können. Stellenweise wurde mit zusätzlicher Hardware getestet, die einen Sensoranschluss ermöglichte.
 

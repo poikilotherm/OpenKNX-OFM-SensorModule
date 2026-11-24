@@ -111,6 +111,7 @@
                 <TypeRestriction Base="Value" SizeInBit="4">
                   <Enumeration Text="Kein Sensor" Value="0" Id="%ENID%" />
                   <Enumeration Text="SHT3x" Value="1" Id="%ENID%" />
+                  <Enumeration Text="SHT4x" Value="15" Id="%ENID%" />
                   <Enumeration Text="BME280 / BMP280" Value="2" Id="%ENID%" />
                   <Enumeration Text="BME680" Value="3" Id="%ENID%" />
                   <Enumeration Text="SCD40" Value="9" Id="%ENID%" />
@@ -124,6 +125,7 @@
                 <TypeRestriction Base="Value" SizeInBit="4">
                   <Enumeration Text="Kein Sensor" Value="0" Id="%ENID%" />
                   <Enumeration Text="SHT3x" Value="1" Id="%ENID%" />
+                  <Enumeration Text="SHT4x" Value="15" Id="%ENID%" />
                   <Enumeration Text="BME280" Value="2" Id="%ENID%" />
                   <Enumeration Text="BME680" Value="3" Id="%ENID%" />
                   <Enumeration Text="SCD30 (nicht empfohlen)" Value="4" Id="%ENID%" />
